@@ -1,146 +1,536 @@
-body {
-  font-family: "Poppins", sans-serif;
-  line-height: 1.6;
+/*# sourceMappingURL=style.css.map */
+/*
+*{
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
 }
 
-#navbar {
-  background-color: #fa59ca;
-  color: white;
-  padding: 10px 20px;
-  position: fixed;
+@media (max-width: 75em) {
+    html {
+      font-size: 30%;
+    }
+  }
+  
+  @media (max-width: 61.25em) {
+    html {
+      font-size: 20%;
+    }
+  }
+  
+  @media (max-width: 28.75em) {
+    html {
+      font-size: 55%;
+    }
+  }
+  .background {
+    width: 100%;
+    height: 100vh;
+    background-image: url(background-pic.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+  }
+
+  .background1 {
+    width: 100%;
+    height: 100vh;
+    background-image: url(background-pic-2.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+  }
+  
+  body {
+    font-family: 'Poppins', sans-serif;
+    font-size: 13px; 
+    font-weight: 400;
+    line-height: 1.4;
+    color: green;
+  }
+
+  h1,h2 {
+  font-family: 'Raleway', sans-serif;
+  font-weight: 700;
+  text-align: center;
+}
+
+h1 {
+  font-size: 20px;
+}
+
+h2 {
+  font-size: 20px;
+}
+
+ul {
+    list-style: none;
+  }
+  
+  a {
+    text-decoration: none;
+    color: blueviolet;
+  }
+  
+  img {
+    display: block;
+    width: 100%;
+  }
+
+  .nav {
+    display: flex;
+    justify-content: flex-end;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: rgba(7, 157, 129, 0.94)
+    box-shadow: 0 2px 0 rgba(169, 44, 44, 0.4);
+    z-index: 10;
+  }
+
+  .nav-list {
+    display: flex;
+    margin-right: 10px;
+  }
+
+  @media (max-width: 28.75em) {
+    .nav {
+      justify-content: center;
+    }
+  
+    .nav-list {
+      margin: 0 1rem;
+    }
+  }
+  
+  .nav-list a {
+    display: block;
+    font-size: 2.2rem;
+    padding: 2rem;
+  }
+
+  .nav-list a:hover {
+    background: var(--main-blue);
+  }
+
+  .welcome-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100vh;
+    background-color: #000;
+    background-image: linear-gradient(62deg, #3a3d40 0%, #181719 100%);
+  }
+
+  .welcome-section > p {
+    font-size: 3rem;
+    font-weight: 200;
+    font-style: italic;
+    color: var(--main-red);
+  }
+
+  .planets-section {
+    text-align: center;
+    padding: 10rem 2rem;
+    background: var(--main-blue);
+  }
+
+  .planets-section-header {
+    max-width: 640px;
+    margin: 0 auto 6rem auto;
+    border-bottom: 0.2rem solid var(--main-white);
+  }
+
+  @media (max-width: 28.75em) {
+    .planets-section-header {
+      font-size: 4rem;
+    }
+  }
+
+  .planets-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    grid-gap: 4rem;
+    width: 100%;
+    max-width: 1280px;
+    margin: 0 auto;
+    margin-bottom: 6rem;
+  }
+  @media (max-width: 30.625em) {
+    .planets-section {
+      padding: 6rem 1rem;
+    }
+  
+    .planets-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+  .planets {
+    background: var(--main-gray);
+    box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+    border-radius: 2px;
+  }
+  .planets:hover .code {
+    color: #ff7f50;
+  }
+  .planet-image {
+    height: calc(100% - 6.8rem);
+    width: 100%;
+    object-fit: cover;
+  }
+
+  .title {
+    font-size: 2rem;
+    padding: 2rem 0.5rem;
+  }
+
+  .btn {
+    display: inline-block;
+    padding: 1rem 2rem;
+    border-radius: 2px;
+  }
+
+  .btn-show-all {
+    font-size: 2rem;
+    background: var(--main-gray);
+    transition: background 0.3s ease-out;
+  }
+  
+  .btn-show-all:hover {
+    background: var(--main-red);
+  }
+  
+  .btn-show-all:hover > i {
+    transform: translateX(2px);
+  }
+  
+  .btn-show-all > i {
+    margin-left: 10px;
+    transform: translateX(0);
+    transition: transform 0.3s ease-out;
+  }
+
+  .Sources-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: 100%;
+    height: 80vh;
+    padding: 0 2rem;
+    background: var(--main-gray);
+  }
+
+  .Sources-section-header > h2 {
+    font-size: 6rem;
+  }
+
+  @media (max-width: 28.75em) {
+    .Sources-section-header > h2 {
+      font-size: 4rem;
+    }
+  }
+
+  .Sources-section-header > p {
+    font-style: italic;
+  }
+
+  .Sources-links {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    max-width: 980px;
+    margin-top: 4rem;
+    flex-wrap: wrap;
+  }
+
+  .Sources-details {
+    font-size: 2.4rem;
+    text-shadow: 2px 2px 1px #1f1f1f;
+    transition: transform 0.3s ease-out;
+  }
+
+  .wiki {
+    height: calc(100% - 6.8rem);
+    width: 25%;
+    object-fit: cover;
+  }
+    
+  .natur {
+    height: calc(100% - 6.8rem);
+    width: 25%;
+    object-fit: cover;
+  
+  }
+*/
+ 
+
+ 
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
+
+@media screen and (min-width: 681px) {
+
+}
+@media screen and (min-width: 1025px) {
+
+}
+
+.background,
+.background1 {
   width: 100%;
-  z-index: 1000;
+  height: 100vh;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.background {
+  background-image: url('background-pic.jpg');
+}
+
+.background1 {
+  background-image: url('background-pic-2.jpg');
+}
+
+
+body {
+  font-family: 'Poppins', sans-serif;
+  font-size: 13px;
+  font-weight: 400;
+  line-height: 1.4;
+  color: green;
+}
+
+
+h1, h2 {
+  font-family: 'Raleway', sans-serif;
+  font-weight: 40px;
+  text-align: center;
+  font-size: 20px;
+}
+
+
+ul {
+  list-style: none;
+}
+
+
+a {
+  text-decoration: none;
+  color: rgb(0, 0, 0);
+}
+
+
+img {
+  display: block;
+  width: 100%;
+}
+
+
+.nav {
+  display: flex;
+  justify-content: flex-end;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: rgba(149, 225, 211, 0.94); 
+  box-shadow: 0 2px 0 rgba(169, 44, 44, 0.4);
+  z-index: 10;
 }
 
 .nav-list {
-  list-style: none;
   display: flex;
-  justify-content: flex-start;
+  margin-right: 10px;
 }
 
-.nav-links {
-  color: white;
-  text-decoration: none;
-  font-weight: bold;
-  font-size: 18px;
-  margin-left: 20px;
-}
+@media (max-width: 28.75em) {
+  .nav {
+      justify-content: center;
+  }
 
-#welcome-section {
-  text-align: center;
-  padding: 80px 20px;
-  background-color: #333;
-  color: white;
-  height: 100vh;
-  width: 100%;
-  font-size: large;
-  text-align: left;
-}
-
-.about-afghanistan h1 {
-  text-align: center;
-}
-
-.cities {
-  text-align: center;
-  padding: 20px;
-  background-color: #86cfec;
-  display: block;
-}
-
-.cities-header {
-  font-size: 28px;
-  margin-bottom: 30px;
-}
-
-.cities-afg {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-}
-
-.city-link {
-  margin: 15px; /* distance between photos */
-  width: 300px;
-  height: 340px;
-  background: #1a1a1a;
-  border-radius: 10px;
-  border: 1px solid black;
-  transition: transform 0.3s ease-in-out;
-}
-
-.city-link:hover {
-  transform: scale(1.3);
-}
-
-.city-image {
-  width: 300px;
-  height: 280px;
-  -o-object-fit: cover;
-     object-fit: cover;
-  border-top-right-radius: 8px;
-  border-top-left-radius: 8px;
-}
-
-.city-title {
-  margin: 10px auto;
-  font-size: 18px;
-  color: aliceblue;
-  text-align: center;
-}
-
-.information-section {
-  padding: 20px;
-  background-color: #78e9df;
-  color: black;
-}
-
-.information-header {
-  font-size: 18px;
-  margin-bottom: 20px;
-  text-align: center;
-}
-
-.information-links {
-  text-align: center;
-  font-size: large;
-  margin-top: 10px;
-}
-
-.information-links a {
-  text-decoration: none;
-  color: white;
-  background-color: #1a1a1a;
-  padding: 10px 20px;
-  margin: 10px;
-  border-radius: 5px;
-  display: flex;
-  justify-content: center;
-  transition: background-color 0.5s ease-in-out;
-}
-
-.information-links a:hover {
-  background-color: #965151;
-}
-
-footer {
-  text-align: center;
-  padding: 10px 0;
-  background-color: #426e83;
-  color: white;
-  font-size: 18px;
-}
-
-@media only screen and (max-width: 600px) {
   .nav-list {
-    flex-direction: column;
-    align-items: center;
+      margin: 0 1rem;
   }
-  .about-afghanistan {
-    background: #426e83;
-    color: black;
-    font-size: 15px;
+}
+
+.nav-list a {
+  display: block;
+  font-size: 2.2rem;
+  padding: 2rem;
+}
+
+.nav-list a:hover {
+  background: var(--main-blue);
+}
+
+
+.welcome-section {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  width: 40%;
+  height: 100vh;
+  background-color: #000;
+  background-image: linear-gradient(62deg, #3a3d40 0%, #181719 100%);
+}
+
+.welcome-section > p {
+  font-size: 3rem;
+  font-weight: 200;
+  font-style: italic;
+  color: var(--main-red);
+}
+
+
+.planets-section {
+  text-align: center;
+  padding: 10rem 2rem;
+  background: var(--main-blue);
+}
+
+.planets-section-header {
+  max-width: 640px;
+  margin: 0 auto 6rem auto;
+  border-bottom: 0.2rem solid var(--main-white);
+}
+
+@media (max-width: 28.75em) {
+  .planets-section-header {
+      font-size: 4rem;
   }
-}/*# sourceMappingURL=styles.css.map */
+}
+
+.planets-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  grid-gap: 4rem;
+  width: 100%;
+  max-width: 1280px;
+  margin: 0 auto;
+  margin-bottom: 6rem;
+}
+
+@media (max-width: 30.625em) {
+  .planets-section {
+      padding: 6rem 1rem;
+  }
+
+  .planets-grid {
+      grid-template-columns: 1fr;
+  }
+}
+
+.planets {
+  background: var(--main-gray);
+  box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+  border-radius: 2px;
+}
+
+.planets:hover .code {
+  color: #ff7f50;
+}
+
+.planet-image {
+  height: calc(100% - 6.8rem);
+  width: 100%;
+  object-fit: cover;
+}
+
+.title {
+  font-size: 2rem;
+  padding: 2rem 0.5rem;
+}
+
+.btn {
+  display: inline-block;
+  padding: 1rem 2rem;
+  border-radius: 2px;
+}
+
+.btn-show-all {
+  font-size: 2rem;
+  background: var(--main-gray);
+  transition: background 0.3s ease-out;
+}
+
+.btn-show-all:hover {
+  background: var(--main-red);
+}
+
+.btn-show-all:hover > i {
+  transform: translateX(2px);
+}
+
+.btn-show-all > i {
+  margin-left: 10px;
+  transform: translateX(0);
+  transition: transform 0.3s ease-out;
+}
+
+
+.Sources-section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  width: 100%;
+  height: 80vh;
+  padding: 0 2rem;
+  background: var(--main-gray);
+}
+
+.Sources-section-header > h2 {
+  font-size: 6rem;
+}
+
+@media (max-width: 28.75em) {
+  .Sources-section-header > h2 {
+      font-size: 4rem;
+  }
+}
+
+.Sources-section-header > p {
+  font-style: italic;
+}
+
+.Sources-links {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  max-width: 980px;
+  margin-top: 4rem;
+  flex-wrap: wrap;
+}
+
+.Sources-details {
+  font-size: 2.4rem;
+  text-shadow: 2px 2px 1px #1f1f1f;
+  transition: transform 0.3s ease-out;
+}
+
+.wiki {
+  height: calc(100% - 6.8rem);
+  width: 25%;
+  object-fit: cover;
+}
+  
+.natur {
+  height: calc(100% - 6.8rem);
+  width: 25%;
+  object-fit: cover;
+}
+
+

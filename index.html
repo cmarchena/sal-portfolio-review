@@ -1,28 +1,83 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <link rel="stylesheet" href="styles.css">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <header>
-        <nav id="navbar">
-            <a href="/#">Link1</a>
+ <div class="background">
+        <nav id="navbar" class="nav">
+            <ul class="nav-list">
+                <li><a href="#welcom-section">About</a></li>
+                <li><a href="#planets">Planets</a></li>
+                <li><a href="#Sources">Sources</a></li>
+            </ul>
         </nav>
-    </header>
-    <main>
-        <section id="welcome-section">
-            <h1>Welcome Section</h1>
+        <section id="welcom-section" class="welcom-section">
+            <h1>A Journey Around the Milky Way</h1>
+            <p>explore our Orion Arm </p>
         </section>
-        <section id="projects">
-            <h2 class="project-title">First Project</h2>
-            <a href="/#">Project1</a>
+        <section id="planets" class="planets-section">
+            <h2 class="planets-section-header">The order of the planets in the solar system, starting nearest the sun and working outward is the following: Mercury, Venus, Earth, Mars, Jupiter, Saturn, Uranus, Neptune and then the possible Planet Nine.</h2>
+            <div class="planets-grid">
+                <a href="https://es.wikipedia.org/wiki/Mercurio_(planeta)" target="_blank" class="planet planet-title">
+                    <img class="planet-image" src="mercury.jpg" alt="planet">
+                    <p class="title">Mercury</p>
+                </a>
+                <a href="https://es.wikipedia.org/wiki/Venus_(planeta)" target="_blank" class="planet planet-title">
+                    <img class="planet-image" src="Venus.jpg" alt="planet">
+                    <p class="title">Venus</p>
+                </a>
+                <a href="https://en.wikipedia.org/wiki/Earth" target="_blank" class="planet planet-title">
+                    <img class="planet-image" src="Earth.jpg" alt="planet">
+                    <p class="title">Earth</p>
+                </a>
+                <a href="https://en.wikipedia.org/wiki/Mars" target="_blank" class="planet planet-title">
+                    <img class="planet-image" src="Mars.png" alt="planet">
+                    <p class="title">Mars</p>
+                </a>
+                <a href="https://es.wikipedia.org/wiki/J%C3%BApiter_(planeta)" target="_blank" class="planet planet-title">
+                    <img class="planet-image" src="Jupiter.png" alt="planet">
+                    <p class="title">Jupiter</p>
+                </a>
+                <a href="https://es.wikipedia.org/wiki/Saturno_(planeta)" target="_blank" class="planet planet-title">
+                    <img class="planet-image" src="Saturn.jpeg" alt="planet">
+                    <p class="title">Saturn</p>
+                </a>
+                <a href="https://es.wikipedia.org/wiki/Urano_(planeta)#:~:text=Urano%20es%20el%20s%C3%A9ptimo%20planeta,abuelo%20de%20Zeus%20(J%C3%BApiter)." target="_blank" class="planet planet-title">
+                    <img class="planet-image" src="Uranus.png" alt="planet">
+                    <p class="title">Uranus</p>
+                </a>
+                <a href="https://es.wikipedia.org/wiki/Neptuno_(planeta)" target="_blank" class="planet planet-title">
+                    <img class="planet-image" src="Neptune.png" alt="planet">
+                    <p class="title">Neptune</p>
+                </a>
+                <a href="https://es.wikipedia.org/wiki/Planeta_Nueve" target="_blank" class="planet planet-title">
+                    <img class="planet-image" src="Planet-Nine.png" alt="planet">
+                    <p class="title">The possible planet Nine</p>
+                </a>
+            </div>
         </section>
-        <section id="contacts">
-            <a href="https://github.com/cmarchena" target="_blank" id="profile-link">Profile link</a>
-        </section>
-    </main>
+</div>
+<div class="background1">
+    <section id="Sources" class="Sources-section">
+        <div class="Sources-section-header">
+            <h2>Here is references and sources</h2>
+            <p>Too many people have full theories, with half the facts</p>
+        </div>
+        <div class="Sources-links">
+            <a id="Wiki-link" href="https://es.wikipedia.org/wiki/Wikipedia:Portada" target="_blank" class="btn Sources-details">
+                <img class="wiki" src="Wikipedia-logo.png" alt="logo">
+            </a>
+            <a id="natur" href="https://www.nature.com/articles/529266a" target="_blank" class="btn Sources-details">
+                <img class="natur" src="Natur-logo.png" alt="logo">
+            </a>
+        </div>
+    </section>
+</div>
+
+    
 </body>
 </html>
